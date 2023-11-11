@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Library</title>
+</head>
+<body>
+    <div id="content">
+        <div id="header">
+            <h2>Library</h2>
+        </div>
+        <div id="main">
+            <button type="button" id="button-add">
+                <div id="adder">
+                    <h2>Add book</h2>
+                </div>
+                <div id="add-book-modal" class="modal">
+                    <div class="modal-content">
+                        <form id="add-book-form">
+                            <h2>Add new book</h2>
+                            <input type="text" id="title" placeholder="Title"
+                                required maxlength="100" 
+                                pattern="[A-z0-9\s]{2,}" />
+                            <input type="text" id="author" placeholder="Author"
+                                required maxlength="100" 
+                                pattern="^[A-z][A-z.,!?\s]{2,}$" />
+                            <input type="number" id="pages" placeholder="Pages"
+                                required min="1" max="10000" />
+                            <div id="isRead-div">
+                                <label for="isRead">Did you read the book?</label>
+                                <input type="checkbox" id="isRead" class="readInputs"/>
+                            </div>
+                        </form>
+                        <div class="submit-cancel">
+                            <span id="submit-span">Submit</span>
+                            <span id="cancel-span">Cancel</span>
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </div>
+        <div id="footer">
+            <h2>Copyright &copy;
+                <a href="https://github.com/Jun1oru" target="_blank">
+                    Jun1oru
+                </a>
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+            </h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
