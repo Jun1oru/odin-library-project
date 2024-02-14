@@ -56,7 +56,18 @@ function resetModalInputs() {
     inputRead.checked = false;
 }
 
-function Book(title, author, pages, isRead) {
+class Book {
+    constructor(title, author, pages, isRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.isRead = Boolean(isRead);
+    }
+    
+    changeReadState = () => this.isRead = !this.isRead;
+}
+
+/*function Book(title, author, pages, isRead) {
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -64,7 +75,7 @@ function Book(title, author, pages, isRead) {
     this.changeReadState = () => {
         this.isRead = !this.isRead;
     };
-}
+}*/
 
 function addBookToLibrary(title, author, pages, isRead) {
     myLibrary.push(new Book(title, author, pages, isRead));
